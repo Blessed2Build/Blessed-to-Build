@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blessed 2 Build</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        header img {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+        section {
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-in-out;
+        }
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, textarea, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="edited_logo.png" alt="Blessed 2 Build Logo">
+        <h1>Blessed 2 Build</h1>
+        <p>Helping displaced families rebuild their lives</p>
+    </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#mission">Our Mission</a>
+        <a href="#vision">Our Vision</a>
+        <a href="#programs">Programs</a>
+        <a href="#partners">Partners</a>
+        <a href="#volunteer">Volunteer</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Blessed 2 Build is dedicated to helping families who have lost everything due to war and political instability. We support them in rebuilding their lives and advocating for peace.</p>
+        <ul>
+            <li><strong>Board:</strong> To be updated soon</li>
+            <li><strong>Team:</strong> To be updated soon</li>
+            <li><strong>Leadership:</strong> To be updated soon</li>
+        </ul>
+    </section>
+    <section id="mission">
+        <h2>Our Mission</h2>
+        <p>Our mission is to support Ethiopian families displaced by conflict through sustainable rebuilding efforts, education, health initiatives, and community partnerships.</p>
+    </section>
+    <section id="vision">
+        <h2>Our Vision</h2>
+        <p>We envision a world where displaced families have the opportunity to rebuild their lives with dignity, resilience, and hope.</p>
+    </section>
+    <section id="programs">
+        <h2>Programs</h2>
+        <ul>
+            <li>Emergency Assistance Fund</li>
+            <li>Rebuilding Housing & Livelihoods</li>
+            <li>Education Support for Children</li>
+            <li>Health Access Programs</li>
+        </ul>
+    </section>
+    <section id="partners">
+        <h2>Partners</h2>
+        <p>We're actively forming partnerships with grassroots organizations in Ethiopia. If you're a nonprofit or a funder interested in working with us, please reach out!</p>
+    </section>
+    <section id="volunteer">
+        <h2>Volunteer With Us</h2>
+        <form action="https://formspree.io/f/xbjnwzlj" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="reason" placeholder="Why do you want to volunteer?" required>
+            <input type="text" name="type" placeholder="Type of organization you want to volunteer with" required>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: blessed2buil@gmail.com | Phone: 770-589-4798</p>
+        <form action="https://formspree.io/f/xbjnwzlj" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="profession" placeholder="Your Profession" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Blessed 2 Build</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let sections = document.querySelectorAll("section");
+            let observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
